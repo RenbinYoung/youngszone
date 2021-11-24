@@ -7,10 +7,12 @@
         <title>Mr.Young's html temp1</title><!--html name-->
         <!--CSS-->
         <style>/***only in CSS***/
+                /*body*/
                 body
                 {
                         background-color:whitesmoke;
                 }
+                /*h*/
                 h1
                 {
                         color:red;
@@ -18,23 +20,52 @@
                 }
                 p.normal{font-style: normal;color: tomato;font-size: 50px;}
                 p.italic{font-style: italic;font-size: 30px;}
-                p.oblique{font-style: oblique;}
+                p.oblique{font-style: oblique;font-size: 1em;}
+                /*a*/
+                a:link{color: grey;text-decoration: none;}
+                a:visited{color:black;text-decoration: none;}
+                a:hover{color:magenta;text-decoration: underline;}
+                a:active{color:red;}
+                /*image*/
+                img.linghua{display: block;margin: auto;height:420px;width: 500px;}
+                /*element alignment*/
+                div.alignment{
+                        margin: 5em;
+                        width: 50em;
+                        border: 1em solid skyblue;
+                        padding: 2em;
+                }
+                div.test1{
+                        position: absolute;
+                        left: 1000px;top: 10px;
+                        width: 300px;
+                        background: rgb(35, 178, 197);
+                }
+                div p{
+                        background-color: green;
+                        width: 500px;
+                }
+                fieldset.PI{
+                        width: 500px;
+                }
         </style>
 </head>
 <body>
-        <h1><a id="Top"></a> My first title</h1>
+        <a id="Top" href="#But">^But</a>
+        <h1> My first title</h1>
         <font size='6'>test</font>
         <hr><!--horizon line-->
+        <div>
+                <p>prograph in div</p>
+        </div>
         <p class="normal">My first prograph</p>
         <b>Size test</b><br>
         <i>Size test</i><br>
         <small>Size test</small><br>
         Size<sup>test</sup><br>
-        Size<sub>test</sub><br>
         <p class="italic">My second prograph</p>
-        <p class="oblique">My third prograph</p>
         <h1>My second title</h1>
-        <hr>
+        <hr><!--horizon line-->
         <pre><!--pre save the space and line feed-->
                 <font size='6'>
                         You are not my priority any more
@@ -48,30 +79,116 @@
         <p><del>No</del><ins>Yes</ins>, I do.</p>
                 
         <!--href net link-->
-        <a href="https://www.bilibili.com/" style="text-decoration: none;">B net</a><br>
-        <a href="https://www.baidu.com/" style="text-decoration: none;">Baidu net</a><br>
-                
+        <a href="https://www.bilibili.com/">B net</a><br>
+
         <!--image-->
-        <img src="Linghua.png" width="500" height="420"><br>
+        <img class="linghua" src="Linghua.png"><br>
          
+        <!--table-->
+        <table border="1"><!--show the line use "1"-->
+                <tr>
+                        <th>cell 1</th>
+                        <th>cell 2</th>
+                </tr>
+                <tr>
+                        <td>a11</td>
+                        <td>a12</td>
+                </tr>
+                <tr>
+                        <td>a21</td>
+                        <td>a22</td>
+                </tr>
+        </table>
 
+        <!--layout-->
+        <div class="test1">
+                <div id="menu" style="background-color: darkslategrey;color: darkgrey;height: 100px;width: 150px;float: left;">
+                HTML<br>
+                CSS<br>
+                JS</div>
+                <div id="content" style="background-color: darkslategrey;color: darkkhaki;height: 100px;width: 150px;float: left;">
+                        content</div>
+        </div>
+        <div><br><br><br><br><br><br><br><br><br></div>
 
+        <!--input and cooki-->
+        <form action="demo-form.php" method="get">
+                <input type="checkbox" name="vehicle" value="Bike">Bike<br>
+                <input type="checkbox" name="vehicle" value="Car">Car<br>
+                <input type="button" value="OK">
+        </form>
+        <form action="">
+                <!--Radio Buttons-->
+                <input type="radio" name="sex" value="male">Male<br>
+                <input type="radio" name="sex" value="female">Female<br>
 
+                <!--Checkboxes-->
+                <input type="checkbox" name="vehicle" value="Bike">Bike<br>
+                <input type="checkbox" name="vehicle" value="Car">Car<br>
+                
+                <!--Input box-->
+                <fieldset class="PI">
+                        <legend>Personal information:</legend>
+                        Username: <input type="text" name='user'><br>
+                        Password: <input type="password" name="password"><br>
+                </fieldset>
 
+                <!--Drop down list-->
+                <select name="cars" id="">
+                        <option value="volov">Volov</option>
+                        <option value="bwm">BWM</option>
+                        <option value="byd" selected>BYD</option>
+                        <option value="benz">Benz</option>
+                </select>
+                <br>
 
+                <!--text box-->
+                <textarea name="textbox" id="" cols="30" rows="10">
+                This is a text box.
+                </textarea>
+                <br>
 
+                <!--Button-->
+                <input type="button" value="OK">
 
-        <!--Jump to somewhere us id-->
+        </form>
+
+        <!--iframe-->
+        <iframe src="myhtml1.html" width="500" height="300" frameborder="0"></iframe>
+        <br>
+
+        <!--JavaScript-->
+        <script>
+                document.write("Hello HTML and JavaScript")
+        </script>
+        <noscript>Sorry, your browser doesn't support JavaScript</noscript>
+        <h1 id="test1">test1</h1>
+        <script>
+                function update()
+                {
+                        document.getElementById("test1").innerHTML="Neither the first choice nor the exception."
+                }
+        </script>
+        <button type="button" onclick="update()">Change</button>
+
+        <!---->
+        <div class="alignment">
+                <p>Good afternoon, everyone! I am your friend, Mr.Young.</p>
+        </div>
+
+        <!--Address-->
         <h1>Address</h1>
         <address>
                 <font size='3'>
                 Written by Mr.Young<br>
                 Visit me at:<br>
-                Mr.Young.com<br>
+                https://renbinyoung.github.io/youngszone/myhtml1.html<br>
                 PCSemic, Bishan, Chongqing<br>
                 CHINA<br>
                 </font>
         </address>
-        <a href="#Top" style="text-decoration: none;">^Top</a>
+
+        <!--Jump to somewhere use id-->
+        <a id="But" href="#Top" style="text-decoration: none;">^Top</a>
 </body>
 </html>
