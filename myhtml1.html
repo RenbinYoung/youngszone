@@ -21,11 +21,6 @@
                 p.normal{font-style: normal;color: tomato;font-size: 50px;}
                 p.italic{font-style: italic;font-size: 30px;}
                 p.oblique{font-style: oblique;font-size: 1em;}
-                /*a*/
-                a:link{color: grey;text-decoration: none;}
-                a:visited{color:black;text-decoration: none;}
-                a:hover{color:magenta;text-decoration: underline;}
-                a:active{color:red;}
                 /*image*/
                 img.linghua{display: block;margin: auto;height:420px;width: 500px;}
                 /*element alignment*/
@@ -48,10 +43,124 @@
                 fieldset.PI{
                         width: 500px;
                 }
+                /*navigation*/
+                ul{
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        background-color:green;
+                        /* width:fit-content; */
+                }
+                li{float: left;color: green;}
+                /* a:link,a:visited{
+                        display: block;
+                        width: 120px;
+                        font-weight: bold;
+                        color: white;
+                        background-color:green;
+                        text-align: center;
+                        padding: 4px;
+                        text-decoration: none;
+                }
+                a:hover,a:active{
+                        background-color: darkgreen;
+                } */
+                li a{
+                        display: inline-block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                }
+                div.music a{
+                        display: inline-block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                }
+                li a:hover, div.music:hover, div.music-list{
+                        background-color: darkgreen;
+                }
+                div.music{
+                        display: inline-block;
+                }
+                div.music-cont{
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px whitesmoke;
+                }
+                div.music-cont a{
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                }
+                div.music-cont a:hover {background-color:gainsboro;}
+                div.music:hover div.music-cont{
+                        display: block;
+                }
+                div.movie a{
+                        display: inline-block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                }
+                div.movie:hover, div.movie-list{
+                        background-color: darkgreen;
+                }
+                div.movie{
+                        display: inline-block;
+                }
+                div.movie-cont{
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px whitesmoke;
+                }
+                div.movie-cont a{
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                }
+                div.movie-cont a:hover {background-color:gainsboro;}
+                div.movie:hover div.movie-cont{
+                        display: block;
+                }
+
+
+
+                
         </style>
 </head>
 <body>
         <a id="Top" href="#But">^But</a>
+        <hr><!--horizon line-->
+        <ul>
+                <li><a href="/myhtml1.html">Home</a></li>
+                <div class="music">
+                        <a href="#music" class="music-list">Music</a>
+                        <div class="music-cont">
+                                <a href="https://y.qq.com/">QQ Music</a>
+                                <a href="https://music.163.com/">NEC Music</a>
+                        </div>
+                </div>
+                <div class="movie">
+                        <a href="#movie" class="movie-list">Video</a>
+                        <div class="movie-cont">
+                                <a href="https://www.bilibili.com/">B Net</a>
+                                <a href="https://v.qq.com/">Tencent Video</a>
+                                <a href="https://www.iqiyi.com/">iQIYI Video</a>
+                        </div>
+                </div>
+                <li style="float:right;"><a href="#about">About</a></li>
+        </ul>
         <h1> My first title</h1>
         <font size='6'>test</font>
         <hr><!--horizon line-->
@@ -77,9 +186,6 @@
         <p>He said: <q>Buid your dream!</q>So the BYD was</p>
         <p>The book is <cite>Weakness of human</cite></p>
         <p><del>No</del><ins>Yes</ins>, I do.</p>
-                
-        <!--href net link-->
-        <a href="https://www.bilibili.com/">B net</a><br>
 
         <!--image-->
         <img class="linghua" src="Linghua.png"><br>
